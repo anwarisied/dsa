@@ -1,7 +1,12 @@
-#include "./header/search_algorithms.h"
+#include "./header/dynamic_array.h"
 #include <iostream>
 int main() {
-    const std::vector<int> list_of_numbers={3,4,5,6,7,8,10,23};
-    std::cout<<search_algorithms::binary_search(list_of_numbers,4);
+    auto d_arr=dynamic_array(4);
+    d_arr.push_back(10);
+    d_arr.push_back(12);
+    d_arr.push_front(15);
+    d_arr.pop_front();
+    d_arr.pop_front();
+    std::cout << d_arr;
     return 0;
 }
